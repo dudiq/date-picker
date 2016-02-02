@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>PlotPad - Software for constructors</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.tmp) styles/main.css -->
+
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+
+    <link rel="stylesheet" href="jdp-styles.css">
+</head>
+<body>
+<div id="date-picker"></div>
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="jdp-date-picker.js"></script>
+<script src="jdp-time-picker.js"></script>
+<script>
+    (function(){
+        $(document).ready(function(){
+            var el = $('#date-picker');
+            var inst = new jrDatePicker(el, {
+                onChanged: function(date){
+                    console.log(date);
+                }
+            });
+
+        });
+    })();
+</script>
+</body>
+</html>
